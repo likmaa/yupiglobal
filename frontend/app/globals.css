@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+:root {
+  /* Vibe Codeur Palette */
+  --brand-violet: #7F6EE8; /* Primary CTA */
+  --brand-cyan: #00BCD4;   /* Secondary Hover */
+  --dark-bg: #111827;      /* Main Background (Gray-900) */
+  --light-text: #FFFFFF;   /* Main Text */
+  --light-text-secondary: #D1D5DB; /* Body Text (Gray-300) */
+  
+  /* Defaults mapping */
+  --background: var(--dark-bg);
+  --foreground: var(--light-text);
+  --primary: var(--brand-violet);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--brand-violet);
+  --color-brand-violet: var(--brand-violet);
+  --color-brand-cyan: var(--brand-cyan);
+  --color-dark-bg: var(--dark-bg);
+  --color-light-text: var(--light-text);
+  --color-light-text-secondary: var(--light-text-secondary);
+  
+  --font-sans: var(--font-urbanist), sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Utility classes mapping */
+.bg-primary {
+  background-color: var(--brand-violet);
+}
+
+.text-primary {
+  color: var(--brand-violet);
+}
+
+.border-primary {
+  border-color: var(--brand-violet);
+}
+
