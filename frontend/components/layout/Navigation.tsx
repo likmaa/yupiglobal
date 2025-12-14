@@ -4,12 +4,10 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const navItems = [
-  { href: '/', label: 'Accueil' },
-  { href: '/about', label: 'À propos' },
   { href: '/services', label: 'Services' },
-  { href: '/portfolio', label: 'Portfolio' },
+  { href: '/portfolio', label: 'Réalisations' },
   { href: '/blog', label: 'Blog' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/about', label: 'À Propos' },
 ];
 
 export default function Navigation() {
@@ -23,11 +21,10 @@ export default function Navigation() {
           <Link
             key={item.href}
             href={item.href}
-            className={`text-sm font-medium transition-colors hover:text-primary ${
-              isActive
-                ? 'text-primary border-b-2 border-primary'
-                : 'text-gray-600'
-            }`}
+            className={`text-sm font-bold transition-colors hover:text-brand-cyan ${isActive
+                ? 'text-brand-violet'
+                : 'text-light-text/80'
+              }`}
           >
             {item.label}
           </Link>
