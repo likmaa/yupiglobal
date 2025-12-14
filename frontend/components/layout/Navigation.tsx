@@ -4,10 +4,11 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const navItems = [
+  { href: '/', label: 'Accueil' },
+  { href: '/about', label: 'À Propos' },
   { href: '/services', label: 'Services' },
   { href: '/portfolio', label: 'Réalisations' },
   { href: '/blog', label: 'Blog' },
-  { href: '/about', label: 'À Propos' },
 ];
 
 export default function Navigation() {
@@ -22,8 +23,8 @@ export default function Navigation() {
             key={item.href}
             href={item.href}
             className={`text-sm font-bold transition-colors hover:text-brand-cyan ${isActive
-                ? 'text-brand-violet'
-                : 'text-light-text/80'
+              ? 'text-brand-violet'
+              : 'text-light-text/80'
               }`}
           >
             {item.label}
